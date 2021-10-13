@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DzikirApp</string>
+    <string name="txt_doa_lable">Doa dan Dzikir App</string>
+    <string name="txt_kumpulan_doa_dzikir">Kumpulan Doa dan Dzikir Sehari hari</string>
+    <string name="txt_imageview">Imageview</string>
+    <string name="txt_first_row"><![CDATA[Sunnah - Sunnah Qauliyah Dzikir & Doa Shalat]]></string>
+    <string name="txt_dzikir_setiap_saat">Dzikir Setiap Saat</string>
+    <string name="txt_dzikir_doa_harian"><![CDATA[Dzikir & Doa Harian]]></string>
+    <string name="txt_dzikir_pagi_petang"><![CDATA[Dzikir Pagi & Petang]]></string>
+</resources>
