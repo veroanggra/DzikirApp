@@ -4,6 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QauliyahActivity">
+    android:padding="@dimen/_16dp"
+    tools:context=".activity.QauliyahActivity">
+
+    <TextView
+        android:id="@+id/tvTxtHarian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:background="@drawable/bg_menu"
+        android:gravity="bottom"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingEnd="@dimen/_16dp"
+        android:paddingBottom="@dimen/_16dp"
+        android:text="@string/txt_qauliyah"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/_24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/rvDzikirDoaQauliyah"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDzikirDoaQauliyah"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTxtHarian"
+        tools:listitem="@layout/item_doa" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

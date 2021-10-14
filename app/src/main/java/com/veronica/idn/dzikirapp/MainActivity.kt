@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     private var dotsCount = 0
     private lateinit var dotsSlider: Array<ImageView?>
 
-    private val slidingCall = object : ViewPager2.OnPageChangeCallback() {
+    private val slidingCallback = object : ViewPager2.OnPageChangeCallback() {
         override fun onPageSelected(position: Int) {
             for (dot in 0 until dotsCount) {
                 dotsSlider[dot]?.setImageDrawable(
@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
+        supportActionBar?.hide()
         initData()
         initView()
         setUpViewPager()
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
         mainBinding.vpArtikel.apply {
             adapter = artikelAdapter
-            registerOnPageChangeCallback(slidingCall)
+            registerOnPageChangeCallback(slidingCallback)
         }
         dotsCount = artikelArray.size
         dotsSlider = arrayOfNulls(dotsCount)
@@ -74,9 +75,16 @@ class MainActivity : AppCompatActivity() {
             mainBinding.llSlider.addView(dotsSlider[i], params)
         }
         dotsSlider[0]?.setImageDrawable(
-            ContextCompat.getDrawable(applicationContext,
-                 R.drawable.active_dot)
+            ContextCompat.getDrawable(
+                applicationContext,
+                R.drawable.active_dot
+            )
         )
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mainBinding.vpArtikel.unregisterOnPageChangeCallback(slidingCallback)
     }
 
     private fun initView() {

@@ -1,8 +1,10 @@
-package com.veronica.idn.dzikirapp
+package com.veronica.idn.dzikirapp.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.veronica.idn.dzikirapp.MainActivity
+import com.veronica.idn.dzikirapp.R
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

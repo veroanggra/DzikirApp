@@ -5,4 +5,8 @@
     <dimen name="_200dp">200dp</dimen>
     <dimen name="_18sp">18sp</dimen>
     <dimen name="_75dp">75dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="_16sp">16sp</dimen>
+    <dimen name="_20sp">20sp</dimen>
+    <dimen name="_24sp">24sp</dimen>
 </resources>
