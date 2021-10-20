@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.veronica.idn.dzikirapp.MainActivity
 import com.veronica.idn.dzikirapp.R
 import com.veronica.idn.dzikirapp.adapter.DzikirDoaAdapter
 import com.veronica.idn.dzikirapp.databinding.ActivityQauliyahBinding
@@ -20,6 +21,13 @@ class QauliyahActivity : AppCompatActivity() {
         setContentView(qauliyahBinding.root)
         supportActionBar?.hide()
         showRecycler()
+        back()
+    }
+
+    private fun back() {
+        qauliyahBinding.ivBackQauliyah.setOnClickListener {
+            startActivity(MainActivity.getLaunchService(this))
+        }
     }
 
     private fun showRecycler() {
@@ -42,8 +50,10 @@ class QauliyahActivity : AppCompatActivity() {
     companion object {
         fun getLaunchService(from: Context) =
             Intent(from, QauliyahActivity::class.java).apply {
-                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or
-                        Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                addFlags(
+                    Intent.FLAG_ACTIVITY_NEW_TASK or
+                            Intent.FLAG_ACTIVITY_CLEAR_TASK
+                )
             }
     }
 }

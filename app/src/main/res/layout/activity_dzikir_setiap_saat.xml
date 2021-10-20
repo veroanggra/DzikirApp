@@ -4,6 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/_16dp"
     tools:context=".activity.DzikirSetiapSaatActivity">
+
+    <TextView
+        android:id="@+id/tvTxtSetiapSaat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:background="@drawable/bg_menu"
+        android:gravity="bottom"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingEnd="@dimen/_16dp"
+        android:paddingBottom="@dimen/_16dp"
+        android:text="@string/txt_dzikir_setiap_saat"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/_24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/rvDzikirSetiapSaat"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDzikirSetiapSaat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTxtSetiapSaat"
+        tools:listitem="@layout/item_doa" />
+
+    <ImageView
+        android:id="@+id/ivBackSetiapSaat"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

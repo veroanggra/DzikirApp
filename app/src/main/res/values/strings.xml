@@ -4,13 +4,15 @@
     <string name="txt_kumpulan_doa_dzikir">Kumpulan Doa dan Dzikir Sehari hari</string>
     <string name="txt_imageview">Imageview</string>
     <string name="txt_first_row"><![CDATA[Sunnah - Sunnah Qauliyah Dzikir & Doa Shalat]]></string>
-    <string name="txt_dzikir_setiap_saat">Dzikir Setiap Saat</string>
     <string name="txt_dzikir_doa_harian"><![CDATA[Dzikir & Doa Harian]]></string>
     <string name="txt_dzikir_pagi_petang"><![CDATA[Dzikir Pagi & Petang]]></string>
     <string name="txt_description">Description</string>
     <string name="txt_lafaz">Lafaz</string>
     <string name="txt_dzikir_dan_doa_harian">Dzikir dan Doa Harian</string>
     <string name="txt_qauliyah">Sunnah - sunnah Qauliyah Dzikir dan Doa Shalat</string>
+    <string name="txt_dzikir_setiap_saat">Dzikir Setiap Saat</string>
+    <string name="txt_pagi_petang">Dzikir Pagi dan Petang</string>
+    <string name="dzikir_pagi">Dzikir Pagi</string>
     <string-array name="img_artikel">
         <item>@drawable/artikel_1</item>
         <item>@drawable/bg_artikel</item>

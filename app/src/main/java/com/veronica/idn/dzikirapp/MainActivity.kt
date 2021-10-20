@@ -8,6 +8,9 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
+import com.veronica.idn.dzikirapp.activity.DzikirHarianActivity
+import com.veronica.idn.dzikirapp.activity.DzikirSetiapSaatActivity
+import com.veronica.idn.dzikirapp.activity.QauliyahActivity
 import com.veronica.idn.dzikirapp.adapter.ArtikelAdapter
 import com.veronica.idn.dzikirapp.adapter.OnItemClickCallback
 import com.veronica.idn.dzikirapp.databinding.ActivityMainBinding
@@ -88,9 +91,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        mainBinding.llDzikirDoaShalat.setOnClickListener { }
-        mainBinding.llDzikirDoaHarian.setOnClickListener { }
-        mainBinding.llDzikirSetiapSaat.setOnClickListener { }
+        mainBinding.llDzikirDoaShalat.setOnClickListener {
+            startActivity(QauliyahActivity.getLaunchService(this))
+        }
+        mainBinding.llDzikirDoaHarian.setOnClickListener {
+            startActivity(DzikirHarianActivity.getLaunchService(this))
+        }
+        mainBinding.llDzikirSetiapSaat.setOnClickListener {
+            startActivity(DzikirSetiapSaatActivity.getLaunchService(this))
+        }
         mainBinding.llDzikirPagiPetang.setOnClickListener { }
     }
 
