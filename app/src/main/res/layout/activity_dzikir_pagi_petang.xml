@@ -29,6 +29,9 @@
         android:focusable="true"
         app:cardCornerRadius="@dimen/_16dp"
         app:cardElevation="@dimen/_4dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_16dp"
+        app:layout_constraintBottom_toTopOf="@id/cvDzikirPetang"
         app:layout_constraintTop_toBottomOf="@id/tvPagiPetangTitle"
         android:id="@+id/cvDzikirPagi">
         <ImageView
@@ -71,6 +74,7 @@
         android:focusable="true"
         app:cardCornerRadius="@dimen/_16dp"
         app:cardElevation="@dimen/_4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cvDzikirPagi"
         android:id="@+id/cvDzikirPetang">
         <ImageView
@@ -89,11 +93,11 @@
             android:paddingStart="@dimen/_16dp"
             android:paddingTop="@dimen/_8dp"
             android:paddingBottom="@dimen/_8dp"
-            android:text="@string/dzikir_pagi"
+            android:text="@string/dzikir_petang"
             android:textColor="@android:color/white"
             android:textSize="@dimen/_18sp"
             android:textStyle="bold"
-            android:id="@+id/tvPagi"/>
+            android:id="@+id/tvPetang"/>
         <ImageButton
             android:layout_width="@dimen/_50dp"
             android:layout_height="@dimen/_50dp"
@@ -103,7 +107,7 @@
             android:background="@drawable/bg_btn_dzikir"
             android:clickable="true"
             android:contentDescription="@string/txt_imageview"
-            android:id="@+id/btnDzikirPagi"
+            android:id="@+id/btnDzikirPetang"
             android:focusable="true"/>
     </com.google.android.material.card.MaterialCardView>
 

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DzikirApp">
         <activity
+            android:name=".activity.PetangActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PagiActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.DzikirSetiapSaatActivity"
             android:exported="false" />
         <activity
