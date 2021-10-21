@@ -23,11 +23,12 @@ class DzikirPagiPetangActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(p0: View?) {
-       when(p0?.id){
-           when(p0?.id){
-               R.id.cvDzikirPagi ->
-           }
-       }
+        when (p0?.id) {
+            R.id.cvDzikirPagi -> startActivity(PagiActivity.getLaunchService(this))
+            R.id.cvDzikirPetang -> startActivity(PetangActivity.getLaunchService(this))
+            R.id.btnDzikirPagi -> startActivity(PagiActivity.getLaunchService(this))
+            R.id.btnDzikirPetang -> startActivity(PetangActivity.getLaunchService(this))
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
