@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DzikirApp">
         <activity
+            android:name=".activity.DetailArtikelActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.PetangActivity"
             android:exported="false" />
         <activity

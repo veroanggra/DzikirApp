@@ -14,6 +14,7 @@
     <string name="txt_pagi_petang">Dzikir Pagi dan Petang</string>
     <string name="dzikir_pagi">Dzikir Pagi</string>
     <string name="dzikir_petang">Dzikir Petang</string>
+    <string name="detail">Detail</string>
     <string-array name="img_artikel">
         <item>@drawable/artikel_1</item>
         <item>@drawable/bg_artikel</item>

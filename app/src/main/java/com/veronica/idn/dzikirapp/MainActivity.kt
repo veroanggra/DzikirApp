@@ -8,9 +8,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
-import com.veronica.idn.dzikirapp.activity.DzikirHarianActivity
-import com.veronica.idn.dzikirapp.activity.DzikirSetiapSaatActivity
-import com.veronica.idn.dzikirapp.activity.QauliyahActivity
+import com.veronica.idn.dzikirapp.activity.*
 import com.veronica.idn.dzikirapp.adapter.ArtikelAdapter
 import com.veronica.idn.dzikirapp.adapter.OnItemClickCallback
 import com.veronica.idn.dzikirapp.databinding.ActivityMainBinding
@@ -53,6 +51,9 @@ class MainActivity : AppCompatActivity() {
         val artikelAdapter = ArtikelAdapter(artikelArray)
         artikelAdapter.setOnItemClickCallback(object : OnItemClickCallback {
             override fun onItemClicked(data: Artikel) {
+                val intent =Intent(applicationContext, DetailArtikelActivity::class.java)
+                intent.putExtra("data", data)
+                startActivity(intent)
             }
         })
 
@@ -100,7 +101,9 @@ class MainActivity : AppCompatActivity() {
         mainBinding.llDzikirSetiapSaat.setOnClickListener {
             startActivity(DzikirSetiapSaatActivity.getLaunchService(this))
         }
-        mainBinding.llDzikirPagiPetang.setOnClickListener { }
+        mainBinding.llDzikirPagiPetang.setOnClickListener {
+            startActivity(DzikirPagiPetangActivity.getLaunchService(this))
+        }
     }
 
     private fun initData() {
